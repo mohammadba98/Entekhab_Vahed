@@ -19,7 +19,8 @@ from django.urls import path, include
 from root import views
 
 urlpatterns = [
-    path('' , views.index),
-    url(r'^register/$' , views.register),
-
+    path('', views.index),
+    url(r'^register/$', views.register),
+    path('ContactUs/', views.contact_us_form, name='contact'),
+    path('ContactUsValue/', views.contact_is_value, name='contact_value')
 ]

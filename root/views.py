@@ -32,3 +32,13 @@ def register(request):
     return render(request, 'register.html', {'form': form})
 
 
+def contact_is_value(request):
+    render(request, 'contact_is_value.html')
+
+
+def contact_us_form(request):
+    if request.method == 'POST':
+        s = request.POST
+        if 10 < len(s['text']) < 250:
+            return render(request , 'contact_is_value.html')
+    return render(request, 'contact_us.html')

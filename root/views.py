@@ -7,4 +7,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('sdaglsdgnksd')
+    # return HttpResponse('sdaglsdgnksd')
+
+    return render(request , 'index.html')
